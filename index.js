@@ -18,7 +18,9 @@ app.get('/contact.html',(req, res)=>{
 app.get('/Resume.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/Resume.html'));
 });
-
+app.get('/garden.html',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/garden.html'));
+});
 app.use('/', router);
 app.listen(port, function(err){
     if (err) console.log("Error in server setup")
