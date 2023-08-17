@@ -43,7 +43,21 @@ ul.a li {
     width: 200px;
 }
 
+tr:nth-child(even) {
+  background-color: #96a9ac;
+}
+tr:nth-child(odd) {
+  background-color: #b8d4d6;
+}
 
+th, td {
+  padding: 15px;
+  border: #D6EEEE;
+}
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
 
 button{
     background:rgb(119, 115, 93);
