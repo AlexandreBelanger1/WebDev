@@ -3,16 +3,35 @@
 <head>
     <style>
         .button {
-          background-color: #0000007a;
-          border: none;
+          background-color: #52234969;
+          border-style: inset;
+          border-color:#160a1469;
           color: rgb(255, 255, 255);
           padding: 15px 32px;
           text-align: center;
           text-decoration: none;
           display: inline-block;
           font-size: 16px;
-          margin: 4px 2px;
+          margin-left: 2%;
           cursor: pointer;
+          width: 100px;
+
+        }
+        footer{
+          position: static;
+          left: 0;
+          bottom:0;
+          width:100%;
+          font-size:small;
+          text-align: right;
+          background-color: rgb(216, 69, 184);
+          color: white;
+          border-style:double;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
         }
         </style>
     <title>Alex's Resume</title>
@@ -20,6 +39,7 @@
     <link href="/css/resume.css" rel="stylesheet" type="text/css">
     <a href="index.html" class="button">Home Page</a>
     </head>
+    
     <body>
     <h1>Resume</h1>
         <p1>Education:</p1>
@@ -147,8 +167,7 @@
             <li>Gardening: I find it very relaxing and rewarding to see the progress in both my indoor and outdoor gardens. See my <a href="garden.html">gardening section</a> on this website!</li>
             <li>Games: Whether it is a card game, board game or a video game, games are a very enjoyable activity that I share with friends.</li>
             <li>Projects: Finding new projects or completing/revamping old projects are a fun way to pick up new skills and create useful tools for my life.</li>
-        </ul>>
-        
+        </ul>
         <p1>Software languages:</p1>
         <ul>
             <li>Java</li>
@@ -156,15 +175,19 @@
             <li>C++</li>
             <li>C#</li>
             <li>MATLAB</li>
-            <li>Processing</li>
-            <li>Arduino</li>
             <li>Python</li>
             <li>HTML</li>
             <li>Flux</li>
             <li>SQL</li>
             <li>CSS</li>
             <li>JS</li>
+            <li>Arduino</li>
+            <li>Processing</li>
         </ul>
+        <div></div>
+        <footer>
+            <p>2023 Alex Belanger  </p>
+        </footer>
     </body>
 
 </html>

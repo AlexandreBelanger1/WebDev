@@ -4,7 +4,8 @@
     <style>
         .button {
           background-color: #cc9602;
-          border: none;
+          border-style:outset;
+          border-color:#ebad05;
           color: white;
           padding: 15px 32px;
           text-align: center;
@@ -14,6 +15,16 @@
           margin: 4px 2px;
           cursor: pointer;
         }
+        footer{
+          position: fixed;
+          left: 0;
+          bottom:0;
+          width:100%;
+          text-align: right;
+          background-color: rgb(14, 83, 116);
+          color: white;
+          border-style:double;
+        }
         </style>
     <title>Alex's Main Page</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
@@ -21,13 +32,13 @@
     </head>
     <body>
     <h1>Home</h1>
-        <p1>WELCOME TO MY HOBBY WEBSITE!</p1>
-<div></div>
+        <h2>WELCOME TO MY HOBBY WEBSITE!</h2>
+          <div>
             <a href="contact.html" class="button">Contact</a>
             <a href="resume.html" class="button">Resume</a>
             <a href="garden.html" class="button">Garden</a>
             <a href="https://alexbelanger.itch.io/" class="button">Games</a>
-            
+          </div>
 
         <div class="dropdown">
   <span></span>
@@ -59,5 +70,8 @@
   </table> 
 </div> 
     </body>
+    <footer>
+      <p>2023 Alex Belanger  .</p>
+    </footer>
 
 </html>

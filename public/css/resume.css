@@ -21,13 +21,19 @@ p1 {
   font-family: fantasy;
   font-size: 200%;
   background: rgba(224, 89, 213, 0.397);
-  width: 100px;
+  width: auto;
   margin-left: 10%;
-  padding: 5px;
+  margin-right:10%;
+  padding: 0px;
     
 }
 ul{
-  margin-left: 10%
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0px;
+}
+li{
+  margin:5px 0;
 }
 ul.a{
   text-align: center;
@@ -38,6 +44,7 @@ ul.a{
   width: 200px;
   margin-top:1%;
   margin-left: 10%;
+  margin-right: 10%;
   padding: 5px;
 }
 ul.b{
