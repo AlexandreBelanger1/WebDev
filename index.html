@@ -1,93 +1,79 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <style>
-        .button {
-          background-color: #cc9602;
-          border-style:outset;
-          border-color:#ebad05;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
-        }
-        footer{
-          position: fixed;
-          left: 0;
-          bottom:0;
-          width:100%;
-          text-align: right;
-          background-color: rgb(14, 83, 116);
-          color: white;
-          border-style:double;
-        }
-        </style>
-    <title>Alex's Main Page</title>
-    <link href="./main.css" rel="stylesheet" type="text/css">
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-    <h1>Home</h1>
-        <h2>WELCOME TO MY HOBBY WEBSITE!</h2>
-          <div>
-            <a href="contact.html" class="button">Contact</a>
-            <a href="resume.html" class="button">Resume</a>
-            <a href="garden2.html" class="button">Garden</a>
-            <a href="games.html" class="button">Games</a>
-            <a href="woodworking.html" class="button">Projects</a>
-          </div>
 
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Main Page</title>
+    <link href="./Home-Style.css" rel="stylesheet" type="text/css">
+    <link href="/css/Home-Style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+
+    <header>
+
+        <h2>WELCOME TO MY HOBBY WEBSITE!</h2>
+        <div class="navbar-container">
+            <div class="navbar">
+                <a href="resume.html">Software Demos</a> <!-- Link back to the web resume page -->
+                <a href="garden2.html">Garden</a>
+                <a href="games.html">Games</a>
+                <a href="woodworking.html">Projects</a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="container">
         <div class="dropdown">
-  <span></span>
-  <div>   
-  
-  </div>
-  <table>
-    <tr>
-      <th>Date</th>
-      <th>Update</th>
-      
-    </tr> 
-    <tr>
-      <td>February 9, 2024</td>
-      <td>It has been a while, life gets busy I guess. I am updating the styles and features of the website now :)</td>
-      
-    </tr>
-    <tr>
-      <td>September 28, 2023</td>
-      <td>Hiatus over, busy times and a bit sick :/ Garden updates are in for the month!</td>
-      
-    </tr>
-    <tr>
-      <td>August 25, 2023</td>
-      <td>Garden  updates from August 23rd added. New unity game in development...</td>
-      
-    </tr>
-    <tr>
-      <td>August 16, 2023</td>
-      <td>This update log was created :o</td>
-      
-    </tr>
-    <tr>
-      <td>August 15, 2023</td>
-      <td>CSS has been added to give the website some style! Recreated my resume to be accessible via website.</td>
-      
-    </tr>
-    <tr>
-      <td>August 12, 2023</td>
-      <td>My hobby website is now accessible via the internet, hosted via raspberry pi 3! Lots was learned in the process.</td>
-      
-    </tr>
-   
-  </table> 
-</div> 
-    </body>
+            <span></span>
+            <div></div>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Update</th>
+                </tr>
+                <tr>
+                    <td>February 9, 2024</td>
+                    <td>It has been a while, life gets busy I guess. I am updating the styles and features of the website now :)</td>
+                </tr>
+                <tr>
+                    <td>September 28, 2023</td>
+                    <td>Hiatus over, busy times and a bit sick :/ Garden updates are in for the month!</td>
+                </tr>
+                <tr>
+                    <td>August 25, 2023</td>
+                    <td>Garden updates from August 23rd added. New unity game in development...</td>
+                </tr>
+                <tr>
+                    <td>August 16, 2023</td>
+                    <td>This update log was created :o</td>
+                </tr>
+                <tr>
+                    <td>August 15, 2023</td>
+                    <td>CSS has been added to give the website some style! Recreated my resume to be accessible via website.</td>
+                </tr>
+                <tr>
+                    <td>August 12, 2023</td>
+                    <td>My hobby website is now accessible via the internet, hosted via raspberry pi 3! Lots was learned in the process.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
     <footer>
-      <p>2023 Alex Belanger  .</p>
+        <div class="footer-buttons">
+            <a href="https://www.linkedin.com/in/alexandre-belanger-960a94242/" target="_blank">
+                <img src="public/images/LinkedIn_logo.png" alt="LinkedIn Logo" width="30" height="30">
+            </a>
+            <a href="https://github.com/AlexandreBelanger1/" target="_blank">
+                <img src="public/images/Github_logo.png" alt="GitHub Logo" width="30" height="30">
+            </a>
+        </div>
+        <p>2023 Alex Belanger .</p>
     </footer>
 
+</body>
 </html>
+
