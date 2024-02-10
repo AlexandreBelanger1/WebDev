@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Woodworking - Hobby Showcase</title>
+    <link rel="stylesheet" href="woodworking-styles.css"> <!-- Separate styles for the woodworking page -->
+</head>
+<body>
+
+    <header>
+        <h1>Your Woodworking</h1>
+        <p>Woodworking Hobby Showcase</p>
+    </header>
+
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="index.html">Resume</a> <!-- Link back to the web resume page -->
+            <a href="#woodworking-photos">Woodworking Photos</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="woodworking-photos" class="woodworking-section">
+            <h2>Project Showcase</h2>
+
+            <div class="photo-grid">
+                <!-- Add woodworking project photos as needed -->
+                <img class="woodworking-photo" src="planterProgress2.jpg" alt="Woodworking Photo 1">
+                <img class="woodworking-photo" src="planterProgress3.jpg" alt="Woodworking Photo 2">
+                <img class="woodworking-photo" src="planterProgress4.jpg" alt="Woodworking Photo 3">
+                <img class="woodworking-photo" src="planterProgress5.jpg" alt="Woodworking Photo 4">
+                <img class="woodworking-photo" src="planterProgress6.jpg" alt="Woodworking Photo 5">
+                <img class="woodworking-photo" src="planterProgress7.jpg" alt="Woodworking Photo 6">
+                <img class="woodworking-photo" src="planterProgress8.jpg" alt="Woodworking Photo 7">
+                <img class="woodworking-photo" src="planterProgress9.jpg" alt="Woodworking Photo 8">
+                <img class="woodworking-photo" src="planterProgress10.jpg" alt="Woodworking Photo 9">
+                <img class="woodworking-photo" src="planterProgress11.jpg" alt="Woodworking Photo 10">
+                <img class="woodworking-photo" src="planterProgress12.jpg" alt="Woodworking Photo 11">
+                <img class="woodworking-photo" src="planterProgress13.jpg" alt="Woodworking Photo 12">
+                <img class="woodworking-photo" src="planterProgress14.jpg" alt="Woodworking Photo 13">
+                
+                <!-- Add more photos as needed -->
+            </div>
+
+            <div class="pagination">
+                <button onclick="changePage(-1)">Previous</button>
+                <button onclick="changePage(1)">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        
+        function changePage(delta) {
+            currentPage += delta;
+            showPage(currentPage);
+        }
+
+        function showPage(page) {
+            const photos = document.querySelectorAll('.woodworking-photo');
+            const photosPerPage = 5;
+            const totalPages = Math.ceil(photos.length / photosPerPage);
+
+            if (page < 1) {
+                currentPage = 1;
+            } else if (page > totalPages) {
+                currentPage = totalPages;
+            }
+
+            const startIndex = (currentPage - 1) * photosPerPage;
+            const endIndex = startIndex + photosPerPage;
+
+            photos.forEach((photo, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    photo.style.display = 'block';
+                } else {
+                    photo.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showPage(currentPage);
+        });
+    </script>
+
+</body>
+</html>

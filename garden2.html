@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Garden - Hobby Showcase</title>
+    <link rel="stylesheet" href="garden2.css"> <!-- Separate styles for the gardening page -->
+</head>
+<body>
+
+    <header>
+        <h1>Your Garden</h1>
+        <p>Gardening Hobby Showcase</p>
+    </header>
+
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="index.html">Resume</a> <!-- Link back to the web resume page -->
+            <a href="#garden-photos">Garden Photos</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="garden-photos" class="garden-section">
+            <h2>Photo Updates</h2>
+
+            <div class="photo-grid">
+                <img class="garden-photo" src="garden-photo1.jpg" alt="Garden Photo 1">
+                <img class="garden-photo" src="garden-photo2.jpg" alt="Garden Photo 2">
+                <!-- Add more photos as needed -->
+                <!-- Repeat the pattern for each set of 5 photos -->
+                <!-- For example, for the second set of 5 photos -->
+                <img class="garden-photo" src="garden-photo6.jpg" alt="Garden Photo 6">
+                <img class="garden-photo" src="garden-photo7.jpg" alt="Garden Photo 7">
+                <img class="garden-photo" src="garden-photo8.jpg" alt="Garden Photo 8">
+                <img class="garden-photo" src="garden-photo9.jpg" alt="Garden Photo 9">
+                <img class="garden-photo" src="garden-photo10.jpg" alt="Garden Photo 10">
+                <!-- Repeat as needed -->
+
+            </div>
+
+            <div class="pagination">
+                <button onclick="changePage(-1)">Previous</button>
+                <button onclick="changePage(1)">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        
+        function changePage(delta) {
+            currentPage += delta;
+            showPage(currentPage);
+        }
+
+        function showPage(page) {
+            const photos = document.querySelectorAll('.garden-photo');
+            const photosPerPage = 5;
+            const totalPages = Math.ceil(photos.length / photosPerPage);
+
+            if (page < 1) {
+                currentPage = 1;
+            } else if (page > totalPages) {
+                currentPage = totalPages;
+            }
+
+            const startIndex = (currentPage - 1) * photosPerPage;
+            const endIndex = startIndex + photosPerPage;
+
+            photos.forEach((photo, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    photo.style.display = 'block';
+                } else {
+                    photo.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showPage(currentPage);
+        });
+    </script>
+
+</body>
+</html>

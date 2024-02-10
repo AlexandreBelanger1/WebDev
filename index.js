@@ -18,8 +18,11 @@ app.get('/contact.html',(req, res)=>{
 app.get('/Resume.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/Resume.html'));
 });
-app.get('/garden.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/garden.html'));
+app.get('/garden2.html',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/garden2.html'));
+});
+app.get('/woodworking.html',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/woodworking.html'));
 });
 app.get('/games.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/games.html'));
