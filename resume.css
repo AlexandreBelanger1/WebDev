@@ -19,6 +19,7 @@ header {
 
 .navbar-container {
   background-color: #0056b3;
+  padding: 5px;
 }
 
 .navbar a {

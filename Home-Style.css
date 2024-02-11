@@ -1,12 +1,17 @@
 
         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+           
             font-family: 'Arial', sans-serif;
             background-color: #ffffff;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             color: #495057;
-            line-height: 1.6;
+
+            
         }
 
         header {
@@ -18,8 +23,7 @@
 
         .navbar-container {
             background-color: #0056b3;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding: 10px;
         }
 
         .navbar a {
@@ -81,6 +85,7 @@
         }
         footer {
             position: fixed;
+            margin-top: auto;
             left: 0;
             bottom: 0;
             width: 100%;
@@ -91,6 +96,7 @@
         }
         .footer {
             display: flex;
+            margin-top: auto;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
@@ -101,10 +107,34 @@
 
         .footer-buttons a {
             display: inline-block;
-            margin-right: 10px; /* Adjust margin to your preference */
+            margin-right: 10px;
             transition: opacity 0.3s;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
         }
 
         .footer-buttons a:hover {
             opacity: 0.8;
+            background-color: #0056b3;
+        }
+        .pagination {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .pagination button {
+            background-color: #0056b3; /* Dark blue-gray button background */
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .pagination button:hover {
+            background-color: #34495e; /* Darker blue-gray on hover */
         }

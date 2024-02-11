@@ -18,6 +18,7 @@ header {
 }
 
 .navbar-container {
+    padding: 5px;
     background-color: #465a4a; /* Dark olive green band */
 }
 
@@ -55,4 +56,60 @@ h1, h2, h3 {
     max-width: 100%;
     border-radius: 8px;
     margin: 20px 0;
+}
+footer {
+    position: fixed;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #8f9a8b;
+    color: white;
+    border-style: double;
+    padding: 10px;
+}
+.footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #465a4a; 
+    color: #28342c;
+    border-style: double;
+}
+
+.footer-buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #465a4a; 
+    color: white;
+}
+
+.footer-buttons a:hover {
+    opacity: 0.8;
+    background-color: #28342c;
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pagination button {
+    background-color: #465a4a;  
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #28342c; /* Darker blue-gray on hover */
 }
