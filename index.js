@@ -12,14 +12,14 @@ app.get('/',(req, res)=>{
 app.get('/index.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/index.html'));
 });
-app.get('/Resume.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/Resume.html'));
+app.get('/SoftwareProjects.html',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/SoftwareProjects.html'));
 });
-app.get('/garden2.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/garden2.html'));
+app.get('/Garden.html',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/Garden.html'));
 });
-app.get('/woodworking.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/woodworking.html'));
+app.get('/HobbyProjects.html',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/HobbyProjects.html'));
 });
 app.use('/', router);
 app.listen(port, function(err){
