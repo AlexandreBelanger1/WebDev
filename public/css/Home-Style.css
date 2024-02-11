@@ -18,6 +18,8 @@
 
         .navbar-container {
             background-color: #0056b3;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
         .navbar a {
