@@ -12,9 +12,6 @@ app.get('/',(req, res)=>{
 app.get('/index.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/index.html'));
 });
-app.get('/contact.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/contact.html'));
-});
 app.get('/Resume.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/Resume.html'));
 });
@@ -23,12 +20,6 @@ app.get('/garden2.html',(req, res)=>{
 });
 app.get('/woodworking.html',(req, res)=>{
     res.sendFile(path.join(__dirname+'/woodworking.html'));
-});
-app.get('/games.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/games.html'));
-});
-app.get('/projects.html',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/projects.html'));
 });
 app.use('/', router);
 app.listen(port, function(err){

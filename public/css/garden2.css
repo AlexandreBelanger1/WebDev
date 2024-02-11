@@ -4,7 +4,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #e0eadc; /* Light green background */
     margin: 0;
-    padding: 0;
+    padding-bottom: 200px;
     box-sizing: border-box;
     color: #4e4934; /* Dark brown text */
     line-height: 1.6;

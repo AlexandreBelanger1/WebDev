@@ -4,7 +4,7 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
   margin: 0;
-  padding: 0;
+  padding-bottom: 200px;
   box-sizing: border-box;
   color: #495057;
   line-height: 1.6;
@@ -151,7 +151,7 @@ div.desc {
 }
 
 footer {
-  display: flex;
+  position: fixed;
   margin-bottom: -10px;
   left: 0;
   bottom: 0;
@@ -162,7 +162,7 @@ footer {
   padding: 10px;
 }
 .footer {
-  position: fixed;
+
   display: flex;
   margin-top: auto;
   justify-content: space-between;
