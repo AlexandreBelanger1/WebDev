@@ -50,10 +50,12 @@ h1, h2, h3 {
 
 .project1-section {
     text-align: center;
+    overflow: hidden; /* Ensure that the container expands to fit the content */
 }
 
 .project1-photo {
     max-width: 100%;
+    max-height: auto;
     border-radius: 8px;
     margin: 20px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for each photo */
@@ -61,10 +63,12 @@ h1, h2, h3 {
 
 .project2-section {
     text-align: center;
+    overflow: hidden; /* Ensure that the container expands to fit the content */
 }
 
 .project2-photo {
     max-width: 100%;
+    max-height: auto;
     border-radius: 8px;
     margin: 20px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for each photo */
@@ -72,10 +76,12 @@ h1, h2, h3 {
 
 .project3-section {
     text-align: center;
+    overflow: hidden; /* Ensure that the container expands to fit the content */
 }
 
 .project3-photo {
     max-width: 100%;
+    max-height: auto;
     border-radius: 8px;
     margin: 20px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for each photo */
