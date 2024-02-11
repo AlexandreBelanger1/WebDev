@@ -21,45 +21,146 @@
     </div>
 
     <div class="container">
-        <section id="woodworking-photos" class="woodworking-section">
-            <h2>Project Showcase</h2>
+        <div class="dropdown-container">
+            <label for="projectSelector">Select Project: </label>
+            <select id="projectSelector" onchange="changeProject()">
+                <option value="project1-photo">Indoor Growing Shelf</option>
+                <option value="project2-photo">Automated Indoor Greenhouse</option>
+                <option value="project3-photo">Bedside Table</option>
+                <!-- Add more options for each project -->
+            </select>
+        </div>
 
-            <div class="photo-grid">
-                <!-- Add woodworking project photos as needed -->
-                <img class="woodworking-photo" src="/images/planterProgress2.jpg" alt="Woodworking Photo 1">
-                <img class="woodworking-photo" src="/images/planterProgress3.jpg" alt="Woodworking Photo 2">
-                <img class="woodworking-photo" src="/images/planterProgress4.jpg" alt="Woodworking Photo 3">
-                <img class="woodworking-photo" src="/images/planterProgress5.jpg" alt="Woodworking Photo 4">
-                <img class="woodworking-photo" src="/images/planterProgress6.jpg" alt="Woodworking Photo 5">
-                <img class="woodworking-photo" src="/images/planterProgress7.jpg" alt="Woodworking Photo 6">
-                <img class="woodworking-photo" src="/images/planterProgress8.jpg" alt="Woodworking Photo 7">
-                <img class="woodworking-photo" src="/images/planterProgress9.jpg" alt="Woodworking Photo 8">
-                <img class="woodworking-photo" src="/images/planterProgress10.jpg" alt="Woodworking Photo 9">
-                <img class="woodworking-photo" src="/images/planterProgress11.jpg" alt="Woodworking Photo 10">
-                <img class="woodworking-photo" src="/images/planterProgress12.jpg" alt="Woodworking Photo 11">
-                <img class="woodworking-photo" src="/images/planterProgress13.jpg" alt="Woodworking Photo 12">
-                <img class="woodworking-photo" src="/images/planterProgress14.jpg" alt="Woodworking Photo 13">
-                
-                <!-- Add more photos as needed -->
+        <div id="project1-photo" class="photo-album">
+            <!-- Photos for Project 1 -->
+            <!-- Add your photos here -->
+            <div class="container">
+                <section id="project1-photo" class="project1-section">
+                    <h2>Indoor Growing Shelf</h2>
+        
+                    <div class="photo-grid">
+                        <!-- Add woodworking project photos as needed -->
+                        <img class="project1-photo" src="/images/planterProgress14.jpg" alt="Planter Photo 14">
+                        <img class="project1-photo" src="/images/planterProgress13.jpg" alt="Planter Photo 13">
+                        <img class="project1-photo" src="/images/planterProgress12.jpg" alt="Planter Photo 12">
+                        <img class="project1-photo" src="/images/planterProgress11.jpg" alt="Planter Photo 11">
+                        <img class="project1-photo" src="/images/planterProgress10.jpg" alt="Planter Photo 10">
+                        <img class="project1-photo" src="/images/planterProgress9.jpg" alt="Planter Photo 9">
+                        <img class="project1-photo" src="/images/planterProgress8.jpg" alt="Planter Photo 8">
+                        <img class="project1-photo" src="/images/planterProgress7.jpg" alt="Planter Photo 7">
+                        <img class="project1-photo" src="/images/planterProgress6.jpg" alt="Planter Photo 6">
+                        <img class="project1-photo" src="/images/planterProgress5.jpg" alt="Planter Photo 5">
+                        <img class="project1-photo" src="/images/planterProgress4.jpg" alt="Planter Photo 4">
+                        <img class="project1-photo" src="/images/planterProgress3.jpg" alt="Planter Photo 3">
+                        <img class="project1-photo" src="/images/planterProgress2.jpg" alt="Planter Photo 2">
+                        
+                        <!-- Add more photos as needed -->
+                    </div>
+        
+                    <div class="pagination">
+                        <button onclick="changePage(-1)">Previous</button>
+                        <button onclick="changePage(1)">Next</button>
+                    </div>
+                </section>
             </div>
 
-            <div class="pagination">
-                <button onclick="changePage(-1)">Previous</button>
-                <button onclick="changePage(1)">Next</button>
+        </div>
+
+        <div id="project2-photo" class="photo-album">
+            <!-- Photos for Project 2 -->
+            <!-- Add your photos here -->
+
+            <div class="container">
+                <section id="Greenhouse-Photos" class="project2-section">
+                    <h2>Automated Indoor Greenhouse</h2>
+        
+                    <div class="photo-grid">
+                        <!-- Add woodworking project photos as needed -->
+                        <img class="project2-photo" src="/images/planterProgress14.jpg" alt="Planter Photo 14">
+                        <img class="project2-photo" src="/images/planterProgress13.jpg" alt="Planter Photo 13">
+                        <img class="project2-photo" src="/images/planterProgress12.jpg" alt="Planter Photo 12">
+                        <img class="project2-photo" src="/images/planterProgress11.jpg" alt="Planter Photo 11">
+                        <img class="project2-photo" src="/images/planterProgress10.jpg" alt="Planter Photo 10">
+                        <img class="project2-photo" src="/images/planterProgress9.jpg" alt="Planter Photo 9">
+                        <img class="project2-photo" src="/images/planterProgress8.jpg" alt="Planter Photo 8">
+                        <img class="project2-photo" src="/images/planterProgress7.jpg" alt="Planter Photo 7">
+                        <img class="project2-photo" src="/images/planterProgress6.jpg" alt="Planter Photo 6">
+                        <img class="project2-photo" src="/images/planterProgress5.jpg" alt="Planter Photo 5">
+                        <img class="project2-photo" src="/images/planterProgress4.jpg" alt="Planter Photo 4">
+                        <img class="project2-photo" src="/images/planterProgress3.jpg" alt="Planter Photo 3">
+                        <img class="project2-photo" src="/images/planterProgress2.jpg" alt="Planter Photo 2">
+                        
+                        <!-- Add more photos as needed -->
+                    </div>
+        
+                    <div class="pagination">
+                        <button onclick="changePage(-1)">Previous</button>
+                        <button onclick="changePage(1)">Next</button>
+                    </div>
+                </section>
             </div>
-        </section>
+
+        </div>
+
+        <div id="project3-photo" class="photo-album">
+            <!-- Photos for Project 2 -->
+            <!-- Add your photos here -->
+
+            <div class="container">
+                <section id="Project3-Photos" class="project3-section">
+                    <h2>Bedside Table</h2>
+        
+                    <div class="photo-grid">
+                        <!-- Add woodworking project photos as needed -->
+                        <img class="project3-photo" src="/images/planterProgress14.jpg" alt="Planter Photo 14">
+                        <img class="project3-photo" src="/images/planterProgress13.jpg" alt="Planter Photo 13">
+                        <img class="project3-photo" src="/images/planterProgress12.jpg" alt="Planter Photo 12">
+                        <img class="project3-photo" src="/images/planterProgress11.jpg" alt="Planter Photo 11">
+                        <img class="project3-photo" src="/images/planterProgress10.jpg" alt="Planter Photo 10">
+                        <img class="project3-photo" src="/images/planterProgress9.jpg" alt="Planter Photo 9">
+                        <img class="project3-photo" src="/images/planterProgress8.jpg" alt="Planter Photo 8">
+                        <img class="project3-photo" src="/images/planterProgress7.jpg" alt="Planter Photo 7">
+                        <img class="project3-photo" src="/images/planterProgress6.jpg" alt="Planter Photo 6">
+                        <img class="project3-photo" src="/images/planterProgress5.jpg" alt="Planter Photo 5">
+                        <img class="project3-photo" src="/images/planterProgress4.jpg" alt="Planter Photo 4">
+                        <img class="project3-photo" src="/images/planterProgress3.jpg" alt="Planter Photo 3">
+                        <img class="project3-photo" src="/images/planterProgress2.jpg" alt="Planter Photo 2">
+                        
+                        <!-- Add more photos as needed -->
+                    </div>
+        
+                    <div class="pagination">
+                        <button onclick="changePage(-1)">Previous</button>
+                        <button onclick="changePage(1)">Next</button>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Add more divs for each project -->
+
+        <!-- Add pagination or other navigation for each photo album if needed -->
     </div>
 
+
+    
+
     <script>
+        var selectedProject = "project1-photo";
         let currentPage = 1;
+        changeProject();
         
         function changePage(delta) {
             currentPage += delta;
-            showPage(currentPage);
+            showPage(currentPage,selectedProject);
         }
 
-        function showPage(page) {
-            const photos = document.querySelectorAll('.woodworking-photo');
+        function showPage(page,selectedProject) {
+
+            
+
+            const photos = document.querySelectorAll('.'+selectedProject);
             const photosPerPage = 5;
             const totalPages = Math.ceil(photos.length / photosPerPage);
 
@@ -80,11 +181,44 @@
                 }
             });
         }
+        
 
         document.addEventListener('DOMContentLoaded', function () {
             showPage(currentPage);
         });
+
+        function changeProject() {
+            var projectSelector = document.getElementById("projectSelector");
+            selectedProject = projectSelector.options[projectSelector.selectedIndex].value;
+
+            // Hide all photo albums
+            var albums = document.querySelectorAll('.photo-album');
+            albums.forEach(function(album) {
+                album.style.display = 'none';
+            });
+
+            // Show the selected photo album
+            var selectedAlbum = document.getElementById(selectedProject);
+            if (selectedAlbum) {
+                selectedAlbum.style.display = 'block';
+            }
+        
+            changePage(1-currentPage);
+        }
     </script>
 
 </body>
+
+<footer>
+    <div class="footer-buttons">
+        <a href="https://www.linkedin.com/in/alexandre-belanger-960a94242/" target="_blank">
+            <img src="/images/LinkedIn_logo.png" alt="LinkedIn Logo" width="50" height="50">
+        </a>
+        <a href="https://github.com/AlexandreBelanger1/" target="_blank">
+            <img src="/images/Github_logo.png" alt="GitHub Logo" width="50" height="50">
+        </a>
+    </div>
+    <p>2024 Alex Belanger</p>
+</footer>
+
 </html>

@@ -84,8 +84,8 @@
             color: rgb(255, 255, 255);
         }
         footer {
-            position: fixed;
-            margin-top: auto;
+            display:flex;
+            margin-bottom: -10px;
             left: 0;
             bottom: 0;
             width: 100%;
