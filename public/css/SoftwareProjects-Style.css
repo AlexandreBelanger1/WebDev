@@ -45,31 +45,11 @@ header {
 }
 
 h1, h2, h3 {
-  color: #007bff;
+  color: #ffffff;
 }
 
 p {
   margin-bottom: 1em;
-}
-
-.experience, .education {
-  border-left: 3px solid #007bff;
-  padding-left: 10px;
-  margin-bottom: 20px;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills li {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 5px 10px;
-  margin: 0 5px 5px 0;
-  border-radius: 5px;
 }
 
 /* Additional styles for the updated section with embedded videos */
