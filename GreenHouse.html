@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="./GreenHouse-Style.css" rel="stylesheet" type="text/css">
+    <link href="/css/GreenHouse-Style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header>
+        <h1>Green House Live Updates</h1>
+    </header>
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="index.html">Home Page</a> 
+            <a href="HobbyProjects.html">Back</a> 
+        </div>
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Time Series Data Panels</title>
+
+        <!-- Include Chart.js from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+    
+    <div class="panel" id="panel1">
+        <h2>Green House - Air Temperature (C)</h2>
+        <canvas class="chart" id="chart1"></canvas>
+    </div>
+    
+    <div class="panel" id="panel2">
+        <h2>Green House - Air Humidity</h2>
+        <canvas class="chart" id="chart2"></canvas>
+    </div>
+    
+    <div class="panel" id="panel3">
+        <h2>Green House - Soil Temperature</h2>
+        <canvas class="chart" id="chart3"></canvas>
+    </div>
+
+    <div class="panel" id="panel4">
+        <h2>Green House - Soil Moisture</h2>
+        <canvas class="chart" id="chart4"></canvas>
+    </div>
+    
+   
+    
+    </body>
+    </html>
+    
+
+</body>
+
+<footer>
+    <div class="footer-buttons">
+        <a href="https://www.linkedin.com/in/alexandre-belanger-960a94242/" target="_blank">
+            <img src="/images/LinkedIn_logo.png" alt="LinkedIn Logo" width="50" height="50">
+        </a>
+        <a href="https://github.com/AlexandreBelanger1/" target="_blank">
+            <img src="/images/Github_logo.png" alt="GitHub Logo" width="50" height="50">
+        </a>
+    </div>
+    <p>2024 Alex Belanger</p>
+</footer>
+
+<script>
+    // Function to generate dummy time-series data
+    function generateDummyData() {
+        const data = [];
+        for (let i = 0; i < 10; i++) {
+            data.push(Math.random() * 100);
+        }
+        return data;
+    }
+
+    // Function to render charts
+    function renderChart(panelId, chartId, data) {
+        const ctx = document.getElementById(chartId).getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Array.from({ length: data.length }, (_, i) => i + 1),
+                datasets: [{
+                    label: {
+                        text: 'Greenhouse temperature',
+                        fontColor: 'rgba(75, 192, 192,3)' // Set the label text color
+                    },
+                    
+                    data: data,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+            }
+        });
+    }
+
+    // Generate dummy data and render charts for each panel
+    const dummyData1 = generateDummyData();
+    renderChart("panel1", "chart1", dummyData1);
+
+    const dummyData2 = generateDummyData();
+    renderChart("panel2", "chart2", dummyData2);
+
+    const dummyData3 = generateDummyData();
+    renderChart("panel3", "chart3", dummyData3);
+    
+    const dummyData4 = generateDummyData();
+    renderChart("panel4", "chart4", dummyData4);
+</script>
+
+</html>
