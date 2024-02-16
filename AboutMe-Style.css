@@ -154,7 +154,7 @@ footer {
     border-radius: 5px;
   }
   .Portrait {
-    max-width: 100%;
+    max-width: 50%;
     max-height: auto;
     border-radius: 8px;
     margin: 20px 0;
