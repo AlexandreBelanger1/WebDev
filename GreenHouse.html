@@ -30,22 +30,22 @@
     </head>
     <body>
     
-    <div class="panel" id="panel1">
+    <div class="panel" id="Air Temperature">
         <h2>Green House - Air Temperature (C)</h2>
         <canvas class="chart" id="chart1"></canvas>
     </div>
     
-    <div class="panel" id="panel2">
+    <div class="panel" id="Air Humidity">
         <h2>Green House - Air Humidity</h2>
         <canvas class="chart" id="chart2"></canvas>
     </div>
     
-    <div class="panel" id="panel3">
+    <div class="panel" id="Soil Temperature">
         <h2>Green House - Soil Temperature</h2>
         <canvas class="chart" id="chart3"></canvas>
     </div>
 
-    <div class="panel" id="panel4">
+    <div class="panel" id="Soil Moisture">
         <h2>Green House - Soil Moisture</h2>
         <canvas class="chart" id="chart4"></canvas>
     </div>
@@ -74,8 +74,14 @@
     // Function to generate dummy time-series data
     function generateDummyData() {
         const data = [];
+        const startDate = new Date();
+        startDate.setMilliseconds(0);
+        startDate.setSeconds(0);
+        startDate.setMinutes(0);
+
         for (let i = 0; i < 10; i++) {
-            data.push(Math.random() * 100);
+            const timestamp = new Date(startDate.getTime() + i * 30 * 60 * 1000); // 30 minutes interval
+            data.push({ x: timestamp, y: Math.random() * 100 });
         }
         return data;
     }
@@ -86,38 +92,58 @@
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: Array.from({ length: data.length }, (_, i) => i + 1),
+                labels: data.map(point => point.x.toLocaleTimeString()), // Convert timestamps to time strings
                 datasets: [{
                     label: {
-                        text: 'Greenhouse temperature',
-                        fontColor: 'rgba(75, 192, 192,3)' // Set the label text color
+                        text: "data",
+                        fontColor: 'navy', // Set the label text color
                     },
-                    
                     data: data,
                     borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1,
+                    borderWidth: 2,
                     fill: true,
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                scales: {
+                    x: [{
+                        type: 'time',
+                        time: {
+                            unit: 'minute',
+                            displayFormats: {
+                                minute: 'HH:mm',
+                            },
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time',
+                        },
+                    }],
+                    y: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value',
+                        },
+                    }],
+                },
             }
         });
     }
 
     // Generate dummy data and render charts for each panel
     const dummyData1 = generateDummyData();
-    renderChart("panel1", "chart1", dummyData1);
+    renderChart("Air Temperature", "chart1", dummyData1);
 
     const dummyData2 = generateDummyData();
-    renderChart("panel2", "chart2", dummyData2);
+    renderChart("Air Humidity", "chart2", dummyData2);
 
     const dummyData3 = generateDummyData();
-    renderChart("panel3", "chart3", dummyData3);
+    renderChart("Soil Temperature", "chart3", dummyData3);
     
     const dummyData4 = generateDummyData();
-    renderChart("panel4", "chart4", dummyData4);
+    renderChart("Soil Moisture", "chart4", dummyData4);
 </script>
 
 </html>
