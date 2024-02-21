@@ -66,7 +66,7 @@ footer {
     background-color: #8f9a8b;
     color: white;
     border-style: double;
-    padding: 10px;
+    padding: 2px;
 }
 .footer {
     display: flex;
@@ -87,6 +87,18 @@ footer {
     padding: 8px 16px;
     border-radius: 5px;
     background-color: #465a4a; 
+    color: white;
+}
+
+.footer-buttons a1 {
+    display: inline-block;
+    justify-content: right;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #8f9a8b; 
     color: white;
 }
 

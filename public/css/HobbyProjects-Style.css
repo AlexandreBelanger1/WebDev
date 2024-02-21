@@ -96,14 +96,14 @@ footer {
     background-color: #2c3e50;
     color: white;
     border-style: double;
-    padding: 10px;
+    padding: 2px;
 }
 .footer {
     display: flex;
     margin-top: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #34495e; 
     color: white;
     border-style: double;
@@ -117,6 +117,17 @@ footer {
     padding: 8px 16px;
     border-radius: 5px;
     background-color: #34495e; 
+    color: white;
+}
+.footer-buttons a1 {
+    display: inline-block;
+    justify-content: right;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #2c3e50; 
     color: white;
 }
 
