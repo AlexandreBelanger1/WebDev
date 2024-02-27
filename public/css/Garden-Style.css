@@ -57,6 +57,33 @@ h1, h2, h3 {
     border-radius: 8px;
     margin: 20px 0;
 }
+
+.section-2023 {
+    text-align: center;
+    overflow: hidden; /* Ensure that the container expands to fit the content */
+}
+
+.photo-2023 {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for each photo */
+}
+
+.section-2024 {
+    text-align: center;
+    overflow: hidden; /* Ensure that the container expands to fit the content */
+}
+
+.photo-2024 {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for each photo */
+}
+
 footer {
     position: fixed;
     margin-top: auto;
@@ -124,4 +151,13 @@ footer {
 
 .pagination button:hover {
     background-color: #28342c; /* Darker blue-gray on hover */
+}
+
+.dropdown-container {
+    margin-bottom: 20px;
+}
+
+.dropdown-container select {
+    padding: 8px;
+    border-radius: 5px;
 }

@@ -20,74 +20,138 @@
     </div>
 
     <div class="container">
-        <section id="garden-photos" class="garden-section">
-            <h2>Photo Updates</h2>
+        <div class="dropdown-container">
+            <label for="projectSelector">Select Year: </label>
+            <select id="projectSelector" onchange="changeProject()">
+                <option value="photo-2023">2023 Garden</option>
+                <option value="photo-2024">2024 Garden</option>
+                <!-- Add more options for each year -->
+            </select>
+        </div>
 
-            <div class="photo-grid">
-                <!-- Repeat as needed -->
-                <img class="garden-photo" src="/images/indoorplants5.jpg" alt="Garden Photo 17">
-                <img class="garden-photo" src="/images/indoorplants4.jpg" alt="Garden Photo 16">
-                <img class="garden-photo" src="/images/indoorplants1.jpg" alt="Garden Photo 15">
-                <img class="garden-photo" src="/images/indoorplants2.jpg" alt="Garden Photo 14">
-                <img class="garden-photo" src="/images/indoorplants3.jpg" alt="Garden Photo 13">
-                <img class="garden-photo" src="/images/carrot_harvest1_oct5.jpg" alt="Garden Photo 12">
-                <img class="garden-photo" src="/images/Amaranth_sept28.jpg" alt="Garden Photo 11">
-                <img class="garden-photo" src="/images/baby_beans2_sept28.jpg" alt="Garden Photo 10">
-                <img class="garden-photo" src="/images/baby_beans_sept28.jpg" alt="Garden Photo 9">
-                <img class="garden-photo" src="/images/spicy_peppers_sept828.jpg" alt="Garden Photo 8">
-                <img class="garden-photo" src="/images/yellow_peppers_sept28.jpg" alt="Garden Photo 7">
-                <img class="garden-photo" src="/images/green_peppers2_sept28.jpg" alt="Garden Photo 6">
-                <img class="garden-photo" src="/images/green_peppers_sept28.jpg" alt="Garden Photo 5">
-                <img class="garden-photo" src="/images/BP3_aug23_2023.jpg" alt="Garden Photo 4">
-                <img class="garden-photo" src="/images/BP2_aug23_2023.jpg" alt="Garden Photo 3">
-                <img class="garden-photo" src="/images/More_bell_peppers_aug16_2023.jpg" alt="Garden Photo 2">
-                <img class="garden-photo" src="/images/Pole_beans_aug16_2023.jpg" alt="Garden Photo 1">
-            </div>
-
-            <div id="paginationButtons" class="pagination">
-                <button onclick="changePage(-1)">Previous</button>
-                <button onclick="changePage(1)">Next</button>
-            </div>
-        </section>
-    </div>
-
-   
-
-    <script>
-        let currentPage = 1;
+        <div id="photo-2023" class="photo-album">
+            <!-- Photos for Project 1 -->
+            <!-- Add your photos here -->
+            <div class="container">
+                <section id="photo-2023" class="section-2023">
+                    <h2>2023's Garden</h2>
         
-        function changePage(delta) {
-            currentPage += delta;
-            showPage(currentPage);
-        }
+                    <div class="photo-grid">
+                        <!-- Add woodworking project photos as needed -->
+                        <img class="photo-2023" src="/images/carrot_harvest1_oct5.jpg" alt="Garden Photo 12">
+                        <img class="photo-2023" src="/images/Amaranth_sept28.jpg" alt="Garden Photo 11">
+                        <img class="photo-2023" src="/images/baby_beans2_sept28.jpg" alt="Garden Photo 10">
+                        <img class="photo-2023" src="/images/baby_beans_sept28.jpg" alt="Garden Photo 9">
+                        <img class="photo-2023" src="/images/spicy_peppers_sept828.jpg" alt="Garden Photo 8">
+                        <img class="photo-2023" src="/images/yellow_peppers_sept28.jpg" alt="Garden Photo 7">
+                        <img class="photo-2023" src="/images/green_peppers2_sept28.jpg" alt="Garden Photo 6">
+                        <img class="photo-2023" src="/images/green_peppers_sept28.jpg" alt="Garden Photo 5">
+                        <img class="photo-2023" src="/images/BP3_aug23_2023.jpg" alt="Garden Photo 4">
+                        <img class="photo-2023" src="/images/BP2_aug23_2023.jpg" alt="Garden Photo 3">
+                        <img class="photo-2023" src="/images/More_bell_peppers_aug16_2023.jpg" alt="Garden Photo 2">
+                        <img class="photo-2023" src="/images/Pole_beans_aug16_2023.jpg" alt="Garden Photo 1">
+                        <!-- Add more photos as needed -->
+                    </div>
+        
+                    <div class="pagination">
+                        <button onclick="changePage(-1)">Previous</button>
+                        <button onclick="changePage(1)">Next</button>
+                    </div>
+                </section>
+            </div>
 
-        function showPage(page) {
-            const photos = document.querySelectorAll('.garden-photo');
-            const photosPerPage = 5;
-            const totalPages = Math.ceil(photos.length / photosPerPage);
+        </div>
 
-            if (page < 1) {
-                currentPage = 1;
-            } else if (page > totalPages) {
-                currentPage = totalPages;
+        <div id="photo-2024" class="photo-album">
+            <!-- Photos for Project 1 -->
+            <!-- Add your photos here -->
+            <div class="container">
+                <section id="photo-2024" class="section-2024">
+                    <h2>2023's Garden</h2>
+        
+                    <div class="photo-grid">
+                        <!-- Add woodworking project photos as needed -->
+                        <img class="photo-2024" src="/images/indoorplants9.jpg" alt="Garden Photo 21">
+                        <img class="photo-2024" src="/images/indoorplants8.jpg" alt="Garden Photo 20">
+                        <img class="photo-2024" src="/images/indoorplants7.jpg" alt="Garden Photo 19">
+                        <img class="photo-2024" src="/images/indoorplants6.jpg" alt="Garden Photo 18">
+                        <img class="photo-2024" src="/images/indoorplants5.jpg" alt="Garden Photo 17">
+                        <img class="photo-2024" src="/images/indoorplants4.jpg" alt="Garden Photo 16">
+                        <img class="photo-2024" src="/images/indoorplants1.jpg" alt="Garden Photo 15">
+                        <img class="photo-2024" src="/images/indoorplants2.jpg" alt="Garden Photo 14">
+                        <img class="photo-2024" src="/images/indoorplants3.jpg" alt="Garden Photo 13">
+                        <!-- Add more photos as needed -->
+                    </div>
+        
+                    <div class="pagination">
+                        <button onclick="changePage(-1)">Previous</button>
+                        <button onclick="changePage(1)">Next</button>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <script>
+            var selectedProject = "photo-2023";
+            let currentPage = 1;
+            changeProject();
+            
+            function changePage(delta) {
+                currentPage += delta;
+                showPage(currentPage,selectedProject);
             }
-
-            const startIndex = (currentPage - 1) * photosPerPage;
-            const endIndex = startIndex + photosPerPage;
-
-            photos.forEach((photo, index) => {
-                if (index >= startIndex && index < endIndex) {
-                    photo.style.display = 'block';
-                } else {
-                    photo.style.display = 'none';
+    
+            function showPage(page,selectedProject) {
+    
+                
+    
+                const photos = document.querySelectorAll('.'+selectedProject);
+                const photosPerPage = 5;
+                const totalPages = Math.ceil(photos.length / photosPerPage);
+    
+                if (page < 1) {
+                    currentPage = 1;
+                } else if (page > totalPages) {
+                    currentPage = totalPages;
                 }
+    
+                const startIndex = (currentPage - 1) * photosPerPage;
+                const endIndex = startIndex + photosPerPage;
+    
+                photos.forEach((photo, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        photo.style.display = 'block';
+                    } else {
+                        photo.style.display = 'none';
+                    }
+                });
+            }
+            
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                showPage(currentPage);
             });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            showPage(currentPage);
-        });
-    </script>
+    
+            function changeProject() {
+                var projectSelector = document.getElementById("projectSelector");
+                selectedProject = projectSelector.options[projectSelector.selectedIndex].value;
+    
+                // Hide all photo albums
+                var albums = document.querySelectorAll('.photo-album');
+                albums.forEach(function(album) {
+                    album.style.display = 'none';
+                });
+    
+                // Show the selected photo album
+                var selectedAlbum = document.getElementById(selectedProject);
+                if (selectedAlbum) {
+                    selectedAlbum.style.display = 'block';
+                }
+            
+                changePage(1-currentPage);
+            }
+        </script>
 
 </body>
 <footer>
