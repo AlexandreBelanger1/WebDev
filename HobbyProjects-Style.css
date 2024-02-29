@@ -103,7 +103,7 @@ footer {
     margin-top: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 2px;
     background-color: #34495e; 
     color: white;
     border-style: double;
@@ -114,7 +114,7 @@ footer {
     margin-right: 10px;
     transition: opacity 0.3s;
     text-decoration: none;
-    padding: 8px 16px;
+    
     border-radius: 5px;
     background-color: #34495e; 
     color: white;

@@ -103,8 +103,8 @@ footer {
     margin-top: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    background-color: #34495e; 
+    padding: 2px;
+    background-color: #688fb6; 
     color: white;
     border-style: double;
 }
@@ -114,7 +114,7 @@ footer {
     margin-right: 10px;
     transition: opacity 0.3s;
     text-decoration: none;
-    padding: 8px 16px;
+    
     border-radius: 5px;
     background-color: #34495e; 
     color: white;
@@ -162,4 +162,7 @@ footer {
 .dropdown-container select {
     padding: 8px;
     border-radius: 5px;
+}
+.canvas {
+
 }
