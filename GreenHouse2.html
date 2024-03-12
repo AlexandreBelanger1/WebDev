@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHouse</title>
+    <link href="./GreenHouse-Style.css" rel="stylesheet" type="text/css">
+    <link href="/css/GreenHouse-Style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Green House Live Updates</h1>
+        
+    </header>
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="index.html">Home Page</a> 
+            <a href="HobbyProjects.html">Back</a> 
+        </div>
+    </div>
+    
+   
+    
+    
+    <div class="panel" id="Air Temperature">
+        <h2>Green House - Air Temperature (C)</h2>
+        <canvas class="chart" id="chart1"></canvas>
+    </div>
+    
+    <div class="panel" id="Air Humidity">
+        <h2>Green House - Air Humidity</h2>
+        <canvas class="chart" id="chart2"></canvas>
+    </div>
+    
+    <div class="panel" id="Soil Temperature">
+        <h2>Green House - Soil Temperature</h2>
+        <canvas class="chart" id="chart3"></canvas>
+    </div>
+
+    <div class="panel" id="Soil Moisture">
+        <h2>Green House - Soil Moisture</h2>
+        <canvas class="chart" id="chart4"></canvas>
+    </div>
+    
+   
+</body>
+    
+</html>
+    
+
+
+
+<footer>
+    <div class="footer-buttons">
+        <a1>Alex Belanger 2024</a>
+        <a href="https://www.linkedin.com/in/alexandre-belanger-960a94242/" target="_blank">
+            <img src="/images/LinkedIn_logo.png" alt="LinkedIn Logo" width="20" height="20">
+        </a>
+        <a href="https://github.com/AlexandreBelanger1/" target="_blank">
+            <img src="/images/Github_logo.png" alt="GitHub Logo" width="20" height="20">
+        </a> 
+    </div>
+</footer>
+
+<script>
+    // Function to generate dummy time-series data
+    function fetchCSVAndUpdateChart(chartId, csvFile) {
+        $.get(csvFile, function (data) {
+            const lines = data.split("\n");
+            const chartData = [];
+            for (let i = 1; i < lines.length; i++) { // Start from index 1 to skip header
+                const parts = lines[i].split(",");
+                if (parts.length >= 2) {
+                    chartData.push({
+                        x: new Date(parts[0]).getTime(), // Convert timestamp to UNIX timestamp
+                        y: parseFloat(parts[1]) // Parse the value
+                    });
+                }
+            }
+            renderChart(chartId, chartData);
+        });
+    }
+
+    function renderChart(chartId, data) {
+        const ctx = document.getElementById(chartId).getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.map(point => new Date(point.x).toLocaleTimeString()), // Convert timestamps to time strings
+                datasets: [{
+                    label: {
+                        text: 'Time Series Data',
+                        fontColor: 'navy', // Set the label text color
+                    },
+                    data: data,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    x: [{
+                        type: 'time',
+                        time: {
+                            unit: 'minute',
+                            displayFormats: {
+                                minute: 'HH:mm',
+                            },
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time',
+                        },
+                    }],
+                    y: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value',
+                        },
+                    }],
+                },
+            }
+        });
+    }
+
+// Initial fetch and update
+fetchCSVAndUpdateChart("chart1", "public/DataFiles/data1.csv");
+    fetchCSVAndUpdateChart("chart2", "public/DataFiles/data2.csv");
+    fetchCSVAndUpdateChart("chart3", "public/DataFiles/data3.csv");
+    fetchCSVAndUpdateChart("chart4", "public/DataFiles/data4.csv");
+    // Update charts every 10 minutes
+    setInterval(function () {
+        fetchCSVAndUpdateChart("chart1", "public/DataFiles/data1.csv");
+        fetchCSVAndUpdateChart("chart2", "public/DataFiles/data2.csv");
+        fetchCSVAndUpdateChart("chart3", "public/DataFiles/data3.csv");
+        fetchCSVAndUpdateChart("chart4", "public/DataFiles/data4.csv");
+    }, 10 * 60 * 1000); // 10 minutes interval
+
+</script>
+
+</html>
