@@ -130,16 +130,16 @@
     }
 
 // Initial fetch and update
-fetchCSVAndUpdateChart("chart1", "public/DataFiles/data1.csv");
-    fetchCSVAndUpdateChart("chart2", "public/DataFiles/data2.csv");
-    fetchCSVAndUpdateChart("chart3", "public/DataFiles/data3.csv");
-    fetchCSVAndUpdateChart("chart4", "public/DataFiles/data4.csv");
+fetchCSVAndUpdateChart("chart1", "/DataFiles/data1.csv");
+    fetchCSVAndUpdateChart("chart2", "/DataFiles/data2.csv");
+    fetchCSVAndUpdateChart("chart3", "/DataFiles/data3.csv");
+    fetchCSVAndUpdateChart("chart4", "/DataFiles/data4.csv");
     // Update charts every 10 minutes
     setInterval(function () {
-        fetchCSVAndUpdateChart("chart1", "public/DataFiles/data1.csv");
-        fetchCSVAndUpdateChart("chart2", "public/DataFiles/data2.csv");
-        fetchCSVAndUpdateChart("chart3", "public/DataFiles/data3.csv");
-        fetchCSVAndUpdateChart("chart4", "public/DataFiles/data4.csv");
+        fetchCSVAndUpdateChart("chart1", "/DataFiles/data1.csv");
+        fetchCSVAndUpdateChart("chart2", "/DataFiles/data2.csv");
+        fetchCSVAndUpdateChart("chart3", "/DataFiles/data3.csv");
+        fetchCSVAndUpdateChart("chart4", "/DataFiles/data4.csv");
     }, 10 * 60 * 1000); // 10 minutes interval
 
 </script>
