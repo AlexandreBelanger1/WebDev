@@ -1,4 +1,7 @@
 import pandas as pd
+import time
+
+
 csvUrl1 = 'https://drive.google.com/file/d/1U4VgYg8wXU5_WD9xOqKVf1Gl9_mSgk-i/view?usp=sharing'
 csvUrl2 = 'https://drive.google.com/file/d/1U5NtH8VyQ2iVNiQiMnADBIgjK4xHgupb/view?usp=sharing'
 csvUrl3 = 'https://drive.google.com/file/d/1x_fwR0LecPh7ZTxa2tEOa7O5LDIax4Qd/view?usp=sharing'
@@ -23,4 +26,10 @@ def updateCsvs():
     df4 = importCsv(csvUrl4)
     df4.to_csv("public\DataFiles\data4.csv",index=False)
 
-updateCsvs()
+while(True):
+    try:
+        updateCsvs()
+    except:
+        print("An error has occurred:")
+    time.sleep(60)
+    
