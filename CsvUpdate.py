@@ -15,16 +15,16 @@ def importCsv(url1):
 def updateCsvs():
     #Update data1.csv
     df1 = importCsv(csvUrl1)
-    df1.to_csv("public\DataFiles\data1.csv",index = False)
+    df1.to_csv("/home/alex/webserver/WebDev/public/DataFiles/data1.csv",index = False)
     #Update data2.csv
     df2 = importCsv(csvUrl2)
-    df2.to_csv("public\DataFiles\data2.csv",index=False)
+    df2.to_csv("/home/alex/webserver/WebDev/public/DataFiles/data2.csv",index=False)
     #Update data3.csv
     df3 = importCsv(csvUrl3)
-    df3.to_csv("public\DataFiles\data3.csv",index=False)
+    df3.to_csv("/home/alex/webserver/WebDev/public/DataFiles/data3.csv",index=False)
     #Update data4.csv
     df4 = importCsv(csvUrl4)
-    df4.to_csv("public\DataFiles\data4.csv",index=False)
+    df4.to_csv("/home/alex/webserver/WebDev/public/DataFiles/data4.csv",index=False)
 
 while(True):
     try:
